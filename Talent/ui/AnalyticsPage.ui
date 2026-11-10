@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AnalyticsPage</class>
+ <widget class="QWidget" name="AnalyticsPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1180</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="rootLayout">
+   <property name="spacing">
+    <number>16</number>
+   </property>
+   <property name="leftMargin">
+    <number>28</number>
+   </property>
+   <property name="topMargin">
+    <number>26</number>
+   </property>
+   <property name="rightMargin">
+    <number>28</number>
+   </property>
+   <property name="bottomMargin">
+    <number>22</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="headerRow">
+     <item>
+      <layout class="QVBoxLayout" name="titleBlock">
+       <property name="spacing">
+        <number>2</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="pageTitle">
+         <property name="text">
+          <string>Style Analytics</string>
+         </property>
+         <property name="role" stdset="0">
+          <string>display</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="pageSubtitle">
+         <property name="text">
+          <string>Rotation health, sleeping clothes and outfit history at a glance</string>
+         </property>
+         <property name="role" stdset="0">
+          <string>muted</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="headerSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="kpiRow">
+     <property name="spacing">
+      <number>14</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="kpiTotal">
+       <layout class="QVBoxLayout" name="kpiTotalLayout">
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <property name="leftMargin">
+         <number>16</number>
+        </property>
+        <property name="topMargin">
+         <number>14</number>
+        </property>
+        <property name="rightMargin">
+         <number>16</number>
+        </property>
+        <property name="bottomMargin">
+         <number>14</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="kpiTotalTitle">
+          <property name="text">
+           <string>TOTAL GARMENTS</string>
+          </property>
+          <property name="role" stdset="0">
+           <string>label</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="kpiTotalValue">
+          <property name="text">
+           <string>28</string>
+          </property>
+          <property name="role" stdset="0">
+           <string>kpi</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="kpiTotalHint">
+          <property name="text">
+           <string>across 4 categories</string>
+          </property>
+          <property name="role" stdset="0">
+           <string>muted</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="kpiUtilization">
+       <layout class="QVBoxLayout" name="kpiUtilLayout">
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <property name="leftMargin">
+         <number>16</number>
+        </property>
+        <property name="topMargin">
+         <number>14</number>
+        </property>
+        <property name="rightMargin">
+         <number>16</number>
+        </property>
+        <property name="bottomMargin">
+         <number>14</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="kpiUtilTitle">
+          <property name="text">
+           <string>CLOSET UTILIZATION</string>
+          </property>
+          <property name="role" stdset="0">
+           <string>label</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="kpiUtilValue">
+          <property name="text">
+           <string>78.5%</string>
+          </property>
+          <property name="role" stdset="0">
+           <string>kpi</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="kpiUtilHint">
+          <property name="text">
+           <string>22 worn vs 6 sleeping</string>
+          </property>
+          <property name="role" stdset="0">
+           <string>muted</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="kpiRepeat">
+       <layout class="QVBoxLayout" name="kpiRepeatLayout">
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <property name="leftMargin">
+         <number>16</number>
+        </property>
+        <property name="topMargin">
+         <number>14</number>
+        </property>
+        <property name="rightMargin">
+         <number>16</number>
+        </property>
+        <property name="bottomMargin">
+         <number>14</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="kpiRepeatTitle">
+          <property name="text">
+           <string>REPEAT PREVENTION</string>
+          </property>
+          <property name="role" stdset="0">
+           <string>label</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="kpiRepeatValue">
+          <property name="text">
+           <string>94%</string>
+          </property>
+          <property name="role" stdset="0">
+           <string>kpi</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="kpiRepeatHint">
+          <property name="text">
+           <string>avg 5.2 days between wears</string>
+          </property>
+          <property name="role" stdset="0">
+           <string>muted</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="kpiSleeping">
+       <layout class="QVBoxLayout" name="kpiSleepingLayout">
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <property name="leftMargin">
+         <number>16</number>
+        </property>
+        <property name="topMargin">
+         <number>14</number>
+        </property>
+        <property name="rightMargin">
+         <number>16</number>
+        </property>
+        <property name="bottomMargin">
+         <number>14</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="kpiSleepingTitle">
+          <property name="text">
+           <string>SLEEPING CLOSET</string>
+          </property>
+          <property name="role" stdset="0">
+           <string>label</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="kpiSleepingValue">
+          <property name="text">
+           <string>6 items</string>
+          </property>
+          <property name="role" stdset="0">
+           <string>kpiWarn</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="kpiSleepingHint">
+          <property name="text">
+           <string>unworn for more than 14 days</string>
+          </property>
+          <property name="role" stdset="0">
+           <string>muted</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="bodyRow">
+     <property name="spacing">
+      <number>18</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="calendarCard">
+       <layout class="QVBoxLayout" name="calendarCardLayout">
+        <property name="spacing">
+         <number>12</number>
+        </property>
+        <property name="leftMargin">
+         <number>18</number>
+        </property>
+        <property name="topMargin">
+         <number>16</number>
+        </property>
+        <property name="rightMargin">
+         <number>18</number>
+        </property>
+        <property name="bottomMargin">
+         <number>16</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="calendarHeader">
+          <item>
+           <widget class="QLabel" name="calendarTitle">
+            <property name="text">
+             <string>Outfit Calendar</string>
+            </property>
+            <property name="role" stdset="0">
+             <string>h2</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="calendarSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>0</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="calendarMonth">
+            <property name="text">
+             <string>November 2026</string>
+            </property>
+            <property name="role" stdset="0">
+             <string>h2</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="prevMonth">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="toolTip">
+             <string>Previous month</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="nextMonth">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="toolTip">
+             <string>Next month</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QFrame" name="calendarGrid">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>460</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::NoFrame</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="calendarFooter">
+          <property name="text">
+           <string>Anti-repetition safety index: no outfit duplicated in the past 14 days.</string>
+          </property>
+          <property name="role" stdset="0">
+           <string>muted</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QScrollArea" name="sideScroll">
+       <property name="minimumSize">
+        <size>
+         <width>340</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>340</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::NoFrame</enum>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+       </property>
+       <widget class="QWidget" name="sideHost">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>330</width>
+          <height>700</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="sideHostLayout">
+         <property name="spacing">
+          <number>14</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

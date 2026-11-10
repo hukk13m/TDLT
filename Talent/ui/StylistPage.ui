@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StylistPage</class>
+ <widget class="QWidget" name="StylistPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1180</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="rootLayout">
+   <property name="spacing">
+    <number>14</number>
+   </property>
+   <property name="leftMargin">
+    <number>28</number>
+   </property>
+   <property name="topMargin">
+    <number>26</number>
+   </property>
+   <property name="rightMargin">
+    <number>28</number>
+   </property>
+   <property name="bottomMargin">
+    <number>22</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="headerRow">
+     <property name="spacing">
+      <number>12</number>
+     </property>
+     <item>
+      <layout class="QVBoxLayout" name="titleBlock">
+       <property name="spacing">
+        <number>2</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="pageTitle">
+         <property name="text">
+          <string>AI Outfit Stylist</string>
+         </property>
+         <property name="role" stdset="0">
+          <string>display</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="pageSubtitle">
+         <property name="text">
+          <string>Every recommendation ships with the reasoning behind it</string>
+         </property>
+         <property name="role" stdset="0">
+          <string>muted</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="headerSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="generateButton">
+       <property name="minimumSize">
+        <size>
+         <width>180</width>
+         <height>42</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Generate Outfits</string>
+       </property>
+       <property name="variant" stdset="0">
+        <string>primary</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QFrame" name="contextBar">
+     <layout class="QHBoxLayout" name="contextLayout">
+      <property name="spacing">
+       <number>18</number>
+      </property>
+      <property name="leftMargin">
+       <number>18</number>
+      </property>
+      <property name="topMargin">
+       <number>14</number>
+      </property>
+      <property name="rightMargin">
+       <number>18</number>
+      </property>
+      <property name="bottomMargin">
+       <number>14</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="weatherCard">
+        <layout class="QHBoxLayout" name="weatherLayout">
+         <property name="spacing">
+          <number>12</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="weatherIcon">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="weatherTextLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="weatherTemp">
+             <property name="text">
+              <string>--°C</string>
+             </property>
+             <property name="role" stdset="0">
+              <string>h2</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="weatherMeta">
+             <property name="text">
+              <string>Loading weather...</string>
+             </property>
+             <property name="role" stdset="0">
+              <string>muted</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="contextDivider">
+        <property name="frameShape">
+         <enum>QFrame::Shape::VLine</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Plain</enum>
+        </property>
+        <property name="variant" stdset="0">
+         <string>divider</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="occasionBlock">
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="occasionLabel">
+          <property name="text">
+           <string>OCCASION</string>
+          </property>
+          <property name="role" stdset="0">
+           <string>label</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="occasionFilter">
+          <property name="minimumSize">
+           <size>
+            <width>160</width>
+            <height>34</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="goalBlock">
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="goalLabel">
+          <property name="text">
+           <string>STYLE GOAL</string>
+          </property>
+          <property name="role" stdset="0">
+           <string>label</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="styleGoalFilter">
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>34</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="antiRepBlock">
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="antiRepLabel">
+          <property name="text">
+           <string>ANTI-REPETITION</string>
+          </property>
+          <property name="role" stdset="0">
+           <string>label</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="antiRepRow">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <item>
+           <widget class="QCheckBox" name="strictToggle">
+            <property name="text">
+             <string>Strict</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="antiRepDays">
+            <property name="minimumSize">
+             <size>
+              <width>78</width>
+              <height>34</height>
+             </size>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>14</number>
+            </property>
+            <property name="value">
+             <number>3</number>
+            </property>
+            <property name="suffix">
+             <string> days</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="antiRepSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="contextSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>10</width>
+          <height>0</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabs">
+     <property name="documentMode">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="tabSuggested">
+      <attribute name="title">
+       <string>Suggested</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="suggestedLayout">
+       <property name="spacing">
+        <number>18</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>16</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="suggestScroll">
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+         </property>
+         <widget class="QWidget" name="suggestHost">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>720</width>
+            <height>560</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="suggestHostLayout">
+           <property name="spacing">
+            <number>14</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>8</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QScrollArea" name="xaiScroll">
+         <property name="minimumSize">
+          <size>
+           <width>420</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>420</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+         </property>
+         <widget class="QWidget" name="xaiHost">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>410</width>
+            <height>560</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="xaiHostLayout">
+           <property name="spacing">
+            <number>14</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabSaved">
+      <attribute name="title">
+       <string>Saved looks</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="savedLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>16</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="savedScroll">
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+         </property>
+         <widget class="QWidget" name="savedHost">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1100</width>
+            <height>560</height>
+           </rect>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabHistory">
+      <attribute name="title">
+       <string>Worn history</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="historyLayout">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>16</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="historyToolbar">
+         <item>
+          <widget class="QLabel" name="historyHint">
+           <property name="text">
+            <string>Every logged wear feeds the freshness score and the calendar.</string>
+           </property>
+           <property name="role" stdset="0">
+            <string>muted</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="historySpacer">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>0</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QComboBox" name="historyMonthFilter">
+           <property name="minimumSize">
+            <size>
+             <width>170</width>
+             <height>34</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QScrollArea" name="historyScroll">
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+         </property>
+         <widget class="QWidget" name="historyHost">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1100</width>
+            <height>520</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="historyHostLayout">
+           <property name="spacing">
+            <number>8</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>8</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

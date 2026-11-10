@@ -2,3 +2,11 @@
 __pycache__/
 *.pyc
 .vscode/
+
+# Talent local database and downloaded garment data
+Talent/assets/data/
+Talent/assets/garments/scripts/.cache/
+Talent/assets/garments/IT-*.jpg
+Talent/assets/garments/scraped_30.csv
+Talent/assets/garments/scraped_30.sources.json
+*.parquet

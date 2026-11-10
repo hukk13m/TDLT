@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WardrobePage</class>
+ <widget class="QWidget" name="WardrobePage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1180</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="rootLayout">
+   <property name="spacing">
+    <number>16</number>
+   </property>
+   <property name="leftMargin">
+    <number>28</number>
+   </property>
+   <property name="topMargin">
+    <number>26</number>
+   </property>
+   <property name="rightMargin">
+    <number>28</number>
+   </property>
+   <property name="bottomMargin">
+    <number>22</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="headerRow">
+     <property name="spacing">
+      <number>12</number>
+     </property>
+     <item>
+      <layout class="QVBoxLayout" name="titleBlock">
+       <property name="spacing">
+        <number>2</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="pageTitle">
+         <property name="text">
+          <string>Digital Wardrobe</string>
+         </property>
+         <property name="role" stdset="0">
+          <string>display</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="pageSubtitle">
+         <property name="text">
+          <string>28 items · 6 sleeping · 78% utilized</string>
+         </property>
+         <property name="role" stdset="0">
+          <string>muted</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="headerSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="searchInput">
+       <property name="minimumSize">
+        <size>
+         <width>300</width>
+         <height>42</height>
+        </size>
+       </property>
+       <property name="placeholderText">
+        <string>Search by name, colour, material...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="addButton">
+       <property name="minimumSize">
+        <size>
+         <width>160</width>
+         <height>42</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Add Garment</string>
+       </property>
+       <property name="variant" stdset="0">
+        <string>primary</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="filterRow">
+     <property name="spacing">
+      <number>8</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="chipHost">
+       <property name="frameShape">
+        <enum>QFrame::Shape::NoFrame</enum>
+       </property>
+       <layout class="QHBoxLayout" name="chipLayout">
+        <property name="spacing">
+         <number>8</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <spacer name="filterSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QComboBox" name="seasonFilter">
+       <property name="minimumSize">
+        <size>
+         <width>140</width>
+         <height>36</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="sortFilter">
+       <property name="minimumSize">
+        <size>
+         <width>160</width>
+         <height>36</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QFrame" name="divider">
+     <property name="frameShape">
+      <enum>QFrame::Shape::HLine</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Plain</enum>
+     </property>
+     <property name="variant" stdset="0">
+      <string>divider</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="bodyRow">
+     <property name="spacing">
+      <number>18</number>
+     </property>
+     <item>
+      <widget class="QScrollArea" name="gridScroll">
+       <property name="frameShape">
+        <enum>QFrame::Shape::NoFrame</enum>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+       </property>
+       <widget class="QWidget" name="gridHost">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>760</width>
+          <height>640</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="inspector">
+       <property name="minimumSize">
+        <size>
+         <width>352</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>352</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <layout class="QVBoxLayout" name="inspectorLayout">
+        <property name="spacing">
+         <number>14</number>
+        </property>
+        <property name="leftMargin">
+         <number>18</number>
+        </property>
+        <property name="topMargin">
+         <number>16</number>
+        </property>
+        <property name="rightMargin">
+         <number>18</number>
+        </property>
+        <property name="bottomMargin">
+         <number>16</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="inspectorHeader">
+          <item>
+           <widget class="QLabel" name="inspectorTitle">
+            <property name="text">
+             <string>Garment Inspector</string>
+            </property>
+            <property name="role" stdset="0">
+             <string>h2</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="inspectorSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QToolButton" name="inspectorClose">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="toolTip">
+             <string>Clear selection</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QScrollArea" name="inspectorScroll">
+          <property name="frameShape">
+           <enum>QFrame::Shape::NoFrame</enum>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+          </property>
+          <widget class="QWidget" name="inspectorBody">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>300</width>
+             <height>600</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,20 @@
+{
+  "version": "draft-2026-11",
+  "note": "Placeholder weights. Replace 'weights' with the values from the report; the scoring code reads this file at runtime.",
+  "weights": {
+    "color": 0.30,
+    "occasion": 0.28,
+    "weather": 0.24,
+    "freshness": 0.18
+  },
+  "params": {
+    "pattern_conflict_penalty": 0.15,
+    "rain_without_outer_penalty": 0.62,
+    "cold_temp_below": 18,
+    "clash_score": 0.48,
+    "same_family_score": 0.74,
+    "neutral_only_score": 0.93,
+    "single_accent_score": 0.86,
+    "freshness_floor_days": 1
+  }
+}

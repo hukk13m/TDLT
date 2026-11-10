@@ -1,0 +1,5 @@
+id,name,category,subtype,color_name,color_hex,color_family,pattern,material,breathability,warmth,seasons,occasions
+IT-01,White Oxford Shirt,top,shirt,White,#F7F7F5,neutral,Solid,Cotton Oxford,7,3,"Spring,Summer","University,Smart Casual,Formal"
+IT-12,Slim Black Chinos,bottom,trousers,Black,#141414,neutral,Solid,Cotton Twill,6,4,"Spring,Summer,Autumn,Winter","University,Smart Casual,Casual"
+IT-24,White Leather Sneakers,shoes,sneaker,White,#F2F2F0,neutral,Solid,Calf Leather,5,4,"Spring,Summer,Autumn","University,Casual"
+IT-25,Camel Trench Coat,outer,coat,Camel,#C19A6B,earth,Solid,Cotton Gabardine,4,7,"Spring,Autumn","Smart Casual,Formal"

@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.venv/
+assets/data/
+assets/garments/scripts/.cache/
+assets/garments/IT-*.jpg
+assets/garments/scraped_30.csv
+assets/garments/scraped_30.sources.json
+*.parquet
